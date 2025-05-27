@@ -1,0 +1,135 @@
+:root {
+  --samsung-blue: #1428A0;
+  --sky-blue: #0689D8;
+  --cool-grey-9: #75787B;
+  --white: #FFFFFF;
+  --sun-yellow: #FFC600;
+  --flame-orange: #FF6900;
+  --berry-red: #E4002B;
+  --lotus-purple: #685BC7;
+  --marine-blue: #0057B8;
+  --kelp-blue: #009CA6;
+  --ivy-green: #00B140;
+  --platinum: #E7E7E8;
+  --cool-grey-8: #A6A9AA;
+  --cloud: #53565A;
+  --coal: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--platinum);
+  color: var(--cloud);
+}
+
+header {
+  background-color: var(--samsung-blue);
+  color: var(--white);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header button {
+  background-color: var(--flame-orange);
+  border: none;
+  padding: 8px 16px;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard-container {
+  padding: 32px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h2 {
+  font-size: 22px;
+  color: var(--cloud);
+}
+
+.novo-btn {
+  background-color: var(--kelp-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.novo-btn:hover {
+  background-color: var(--ivy-green);
+}
+
+.chamados-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chamado-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.chamado-card h3 {
+  margin-bottom: 4px;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.status-aberto {
+  background-color: var(--sun-yellow);
+  color: #000;
+}
+
+.status-concluido {
+  background-color: var(--ivy-green);
+  color: var(--white);
+}
+
+.detalhes-btn {
+  background-color: var(--sky-blue);
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.detalhes-btn:hover {
+  background-color: var(--marine-blue);
+}

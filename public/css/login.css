@@ -1,0 +1,101 @@
+:root {
+  /* Cores Primárias */
+  --samsung-blue: #1428A0;
+  --sky-blue: #0689D8;
+  --cool-grey-9: #75787B;
+  --white: #FFFFFF;
+
+  /* Paleta Secundária */
+  --sun-yellow: #FFC600;
+  --flame-orange: #FF6900;
+  --berry-red: #E4002B;
+  --plum-purple: #C800A1;
+  --lotus-purple: #685BC7;
+  --marine-blue: #0057B8;
+  --jay-blue: #00A9E0;
+  --kelp-blue: #009CA6;
+  --ivy-green: #00B140;
+
+  /* Tons de Cinza e Neutros */
+  --platinum: #E7E7E8;
+  --silver: #888B8D;
+  --cool-grey-8: #A6A9AA;
+  --cloud: #53565A;
+  --coal: #000000;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+    background-image: url('FUNDO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  position: absolute;
+  left: 80%;
+  transform: translate(-80%);
+}
+.logo {
+  font-size: 28px;
+  color: var(--samsung-blue);
+  margin-bottom: 24px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.login-form label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--cloud);
+}
+.login-form input {
+  padding: 10px;
+  border: 1px solid var(--cool-grey-8);
+  border-radius: 8px;
+  font-size: 16px;
+}
+.login-form button {
+  padding: 12px;
+  background-color: var(--samsung-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.login-form button:hover {
+  background-color: var(--sky-blue);
+}
+.link-cadastro {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.link-cadastro a {
+  color: var(--marine-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+.link-cadastro a:hover {
+  text-decoration: underline;
+}

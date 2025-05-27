@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel da Empresa</title>
+  <link rel="stylesheet" href="../../css/empresas-icamento/painel.css" />
+</head>
+<body>
+  <header>
+    <h1>Chamados de Içamento</h1>
+  </header>
+
+  <section class="filtros">
+    <select id="filtroStatus">
+      <option value="">Todos</option>
+      <option value="Aguardando">Aguardando</option>
+      <option value="Agendamento Agendado">Agendamento Agendado</option>
+      <option value="Em Execução">Em Execução</option>
+      <option value="Finalizado">Finalizado</option>
+      <option value="No-Show">No-Show</option>
+      <option value="Cancelado">Cancelado</option>
+    </select>
+
+    <input type="date" id="filtroDataInicio" placeholder="Data Início" />
+    <input type="date" id="filtroDataFim" placeholder="Data Fim" />
+    <button>Filtrar</button>
+  </section>
+
+  <section class="tabela-chamados">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Endereço</th>
+          <th>Data</th>
+          <th>Status</th>
+          <th>Detalhes</th>
+        </tr>
+      </thead>
+      <tbody id="listaChamados"></tbody>
+    </table>
+  </section>
+
+  <script src="../../js/empresas-icamento/painel.js"></script>
+</body>
+</html>

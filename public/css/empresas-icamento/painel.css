@@ -1,0 +1,86 @@
+:root {
+  --samsung-blue: #1428A0;
+  --sky-blue: #0689D8;
+  --cool-grey-9: #75787B;
+  --white: #FFFFFF;
+  --sun-yellow: #FFC600;
+  --flame-orange: #FF6900;
+  --berry-red: #E4002B;
+  --plum-purple: #C800A1;
+  --lotus-purple: #685BC7;
+  --marine-blue: #0057B8;
+  --jay-blue: #00A9E0;
+  --kelp-blue: #009CA6;
+  --ivy-green: #00B140;
+  --platinum: #E7E7E8;
+  --silver: #888B8D;
+  --cool-grey-8: #A6A9AA;
+  --cloud: #53565A;
+  --coal: #000000;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--platinum);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--samsung-blue);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1rem;
+  background: var(--white);
+  justify-content: center;
+}
+
+.filtros input, .filtros select, .filtros button {
+  padding: 10px;
+  border: 1px solid var(--cool-grey-8);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.filtros button {
+  background-color: var(--sky-blue);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem auto;
+  max-width: 95%;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid var(--platinum);
+  text-align: center;
+}
+
+th {
+  background-color: var(--sky-blue);
+  color: var(--white);
+}
+
+td button {
+  background-color: var(--kelp-blue);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

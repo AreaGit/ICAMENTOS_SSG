@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes do Chamado</title>
+  <link rel="stylesheet" href="../../css/empresas-icamento/detalhes-chamado.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Detalhes do Chamado</h1>
+
+    <section class="detalhes-chamado">
+      <div class="campo"><h3>ID:</h3> <span id="id"></span></div>
+      <div class="campo"><h3>Título:</h3> <span id="titulo"></span></div>
+      <div class="campo"><h3>Endereço:</h3> <span id="endereco"></span></div>
+      <div class="campo"><h3>Tipo de Içamento:</h3> <span id="tipo_icamento"></span></div>
+      <div class="campo"><h3>Data Agendada:</h3> <span id="data_agenda"></span></div>
+      <div class="campo">
+        <h3>Status:</h3>
+        <span id="status"></span>
+        <button id="btnAvancarStatus" class="botao-download" style="display: none;">
+          
+        </button>
+      </div>
+      <div class="campo"><h3>Observações:</h3> <span id="observacoes"></span></div>
+    </section>
+
+    <section class="anexos">
+      <h2>Anexos</h2>
+      <div class="grid-anexos" id="anexos"></div>
+    </section>
+    
+    <section id="form-finalizacao" style="display: none; margin-top: 30px;">
+      <h2>Finalizar Chamado</h2>
+      
+      <form id="form-finalizar">
+        <div class="campo-form">
+          <label for="horario_finalizacao">Horário de Finalização:</label>
+          <input type="time" id="horario_finalizacao" name="horario_finalizacao" required>
+        </div>
+        
+        <div class="campo-form">
+          <label for="fotos_finalizacao">Fotos do Local:</label>
+          <input type="file" id="fotos_finalizacao" name="fotos_finalizacao" multiple accept="image/*">
+        </div>
+        
+        <div class="campo-form">
+          <label for="obs_finalizacao">Observações:</label>
+          <textarea id="obs_finalizacao" name="obs_finalizacao" rows="4"></textarea>
+        </div>
+        
+        <button type="button" class="botao-download" id="btnSalvar">Salvar Finalização</button>
+      </form>
+    </section>
+
+    <a href="/empresas-icamento/painel" class="botao-voltar">Voltar</a>
+  </main>
+
+  <script src="../../js/empresas-icamento/detalhes-chamado.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Administrativo</title>
+  <link rel="stylesheet" href="../../css/admin/painel.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Painel Administrativo</h2>
+    <nav>
+      <ul>
+        <li><a href="#inicio" onclick="mostrarSecao('inicio')">Início</a></li>
+        <li><a href="#empresas" onclick="mostrarSecao('empresas')">Empresas</a></li>
+        <li><a href="#assistencias" onclick="mostrarSecao('assistencias')">Assistencias</a></li>
+        <li><a href="#chamados" onclick="mostrarSecao('chamados')">Chamados</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <section id="inicio" class="secao" style="display: block;">
+      <h1>Bem-vindo ao Painel Administrativo</h1>
+      <p>Utilize o menu ao lado para navegar entre as seções.</p>
+    </section>
+
+    <section id="empresas" class="secao" style="display:none;">
+      <h1>Empresas Cadastradas</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Razão Social</th>
+            <th>CNPJ</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaEmpresas"></tbody>
+      </table>
+    </section>
+
+    <section id="assistencias" class="secao" style="display: none;">
+      <h1>Assistencias Cadastradas</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Razão Social</th>
+            <th>CNPJ</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaAssistencias"></tbody>
+      </table>
+    </section>
+
+    <section id="chamados" class="secao" style="display: none;">
+      <h1>Chamados</h1>
+      <div style="margin-bottom: 1rem;">
+        <label>Status:
+          <select id="filtroStatus">
+              <option value="">Todos</option>
+              <option value="Aguardando">Aguardando</option>
+              <option value="Agendamento Agendado">Agendamento Agendado</option>
+              <option value="Em Execução">Em Execução</option>
+              <option value="Finalizado">Finalizado</option>
+              <option value="No-Show">No-Show</option>
+              <option value="Cancelado">Cancelado</option>
+            </select>
+          </label>
+          <label>De:
+            <input type="date" id="filtroDataInicio">
+          </label>
+          <label>Até:
+            <input type="date" id="filtroDataFim">
+          </label>
+          <button onclick="carregarChamados()" class="btn-filter">Filtrar</button>
+        </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Endereço</th>
+            <th>Tipo de Içamento</th>
+            <th>Data Agendada</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="listaChamados"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/admin/painel.js"></script>
+</body>
+</html>

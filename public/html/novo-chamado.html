@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criar Novo Chamado - Içamentos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/novo-chamado.css" />
+</head>
+<body>
+  <header>
+    <h1>Novo Chamado - Içamentos</h1>
+    <button id="logout-btn">Voltar</button>
+  </header>
+
+  <main class="novo-chamado-container">
+    <h2>Criar Novo Chamado de Içamento</h2>
+
+    <form class="chamado-form" id="form-chamado">
+      <label for="ordem">Ordem de Serviço *</label>
+      <input type="text" id="ordem" placeholder="Informe a ordem de serviço" required minlength="1" maxlength="10">
+      
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" placeholder="Descreva os detalhes do içamento" required></textarea>
+
+      <label for="cep">CEP</label>
+      <input type="text" id="cep" placeholder="Informe o CEP" required>
+
+      <label for="estado">Estado</label>
+      <input type="text" name="estado" id="estado" placeholder="Informe o Estado" required>
+
+      <label for="cidade">Cidade</label>
+      <input type="text" name="cidade" id="cidade" placeholder="Informe a Cidade" required>
+
+      <label for="bairro">Bairro</label>
+      <input type="text" name="bairro" id="bairro" placeholder="Informe o Bairro" required>
+
+      <label for="rua">Rua</label>
+      <input type="text" name="rua" id="rua" placeholder="Informe a Rua" required>
+
+      <label for="local">Local</label>
+      <select name="local" id="local">
+        <option>Selecionar</option>
+        <option value="CAPITAL">CAPITAL</option>
+        <option value="INTERIOR">INTERIOR</option>
+      </select>
+
+      <label for="regiao">Região</label>
+      <select name="regiao" id="regiao">
+        <option>Selecionar</option>
+        <option value="NORTE">NORTE</option>
+        <option value="NORDESTE">NORDESTE</option>
+        <option value="CENTRO-OESTE">CENTRO-OESTE</option>
+        <option value="SUDESTE">SUDESTE</option>
+        <option value="SUL">SUL</option>
+      </select>
+
+      <label for="numero">Número do Local</label>
+      <input type="text" name="numero" id="numero" placeholder="Informe o numero do local" required>
+
+      <label for="tipo_icamento">Tipo de Içamento</label>
+      <select name="tipo_icamento" id="tipo_icamento">
+        <option>Selecionar</option>
+        <option value="SUBIDA">SUBIDA</option>
+        <option value="DESCIDA">DESCIDA</option>
+        <option value="SUBIDA/DESCIDA">SUBIDA/DESCIDA</option>
+      </select>
+
+      <label for="produto">Produto</label>
+      <select name="produto" id="produto">
+        <option>Selecionar</option>
+        <option value="TELEVISOR">TELEVISOR</option>
+        <option value="GELADEIRA">GELADEIRA</option>
+      </select>
+
+      <label for="vt">Será necessário VT ?</label>
+      <select name="vt" id="vt">
+        <option>Selecionar</option>
+        <option value="SIM">SIM</option>
+        <option value="NÃO">NÃO</option>
+      </select>
+      
+      <label for="art">Local exige ART</label>
+      <select name="art" id="art">
+        <option>Selecionar</option>
+        <option value="SIM">SIM</option>
+        <option value="NÃO">NÃO</option>
+      </select>      
+        
+      <label for="data_agendada">Data Agendada (mínimo 48 horas)</label>
+      <input type="date" name="data_agendada" id="data_agendada" required>
+
+      <label for="anexos">Anexar Arquivos</label>
+      <input type="file" id="anexos" multiple>
+
+      <label for="informacoes_uteis">Informações Úteis</label>
+      <textarea name="informacoes_uteis" id="informacoes_uteis" placeholder="Descreva as informações úteis do içamento"></textarea>
+
+      <section class="valor-icamento-section">
+        <h3>Valor Total do Içamento</h3>
+        <button id="btnCalcular" type="button">Calcular Valor</button>
+        <div id="valor-icamento">R$ 0,00</div>
+      </section>
+
+      <button type="submit">Criar Chamado</button>
+    </form>
+  </main>
+  <script src="../js/novo-chamado.js"></script>
+</body>
+</html>

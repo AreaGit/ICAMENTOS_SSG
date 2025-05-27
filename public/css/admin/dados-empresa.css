@@ -1,0 +1,96 @@
+:root {
+  --samsung-blue: #1428A0;
+  --sky-blue: #0689D8;
+  --cool-grey-9: #75787B;
+  --white: #FFFFFF;
+  --sun-yellow: #FFC600;
+  --flame-orange: #FF6900;
+  --berry-red: #E4002B;
+  --plum-purple: #C800A1;
+  --lotus-purple: #685BC7;
+  --marine-blue: #0057B8;
+  --jay-blue: #00A9E0;
+  --kelp-blue: #009CA6;
+  --ivy-green: #00B140;
+  --platinum: #E7E7E8;
+  --silver: #888B8D;
+  --cool-grey-8: #A6A9AA;
+  --cloud: #53565A;
+  --coal: #000000;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--platinum);
+  color: var(--coal);
+  padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#lnk-voltar {
+    position: relative;
+    left: -25%;
+    top: -350px;
+    font-size: 18px;
+    color: var(--samsung-blue);
+}
+
+.container {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 28px;
+  color: var(--samsung-blue);
+  margin-bottom: 24px;
+}
+
+#formEmpresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#formEmpresa > .form-group > label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--cloud);
+}
+
+#formEmpresa > .form-group > input {
+  padding: 10px;
+  border: 1px solid var(--cool-grey-8);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#formEmpresa button {
+  padding: 12px;
+  background-color: var(--samsung-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  grid-column: 1 / -1;
+}
+
+#formEmpresa button:hover {
+  background-color: var(--sky-blue);
+}
